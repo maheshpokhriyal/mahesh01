@@ -5,7 +5,7 @@ resource "aws_cloudformation_stack" "appstream" {
   count = var.enable_appstream == true ? 1 : 0
   name  = "appstream-${var.stack_name}"
   tags  = var.tags
-  parameters = {
+#  parameters = {
     StackName                      = var.stack_name
     FleetName                      = var.fleet_name
     FleetType                      = var.fleet_type
